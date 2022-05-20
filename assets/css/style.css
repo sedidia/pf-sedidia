@@ -110,9 +110,10 @@ footer a{
 
 section .container article, section .containerp article{
     background:  rgb(73, 84, 88);
+    border: 1px solid rgb(255, 255, 255);
     padding: 1em;
     border-radius: 4px;
-    transition: all .1s;
+    transition: linear .3s all;
 }
 section .container article:hover{
     background:  rgb(85, 97, 102);
@@ -259,10 +260,10 @@ form span{
     /* align-items:center; */
     border-radius: 4px;
 }
-.me_contact .contacte{
+.contacte{
     display: flex;
     align-items: center;
-    background: rgb(255, 255, 255);
+    background: rgb(250, 250, 250);
     padding: 1em;
 }
 .me_contact .contacte span{
@@ -274,13 +275,19 @@ form span{
     font-size: 20px;
     color: rgb(73, 84, 88);
 }
-.me_contact .contacte i{
+.contacte i{
     color: rgb(46, 144, 180);
     font-size: 2em;
-    margin-left: 0em;
+    margin-right: 1em;
 }
 .me_contact .contacte:hover i{
     margin-right: 1em;
+}
+.fonc{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1em;
+    padding-right: .2em;
 }
 @media screen and (max-width: 1100px){
     section .container{
