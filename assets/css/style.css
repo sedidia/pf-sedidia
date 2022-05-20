@@ -81,6 +81,7 @@ section {
     align-items: center;
     padding: 2em 0;
     background: #fff;
+    padding-top: 2em;
 }
 section .container{
     width: 70%;
@@ -88,7 +89,8 @@ section .container{
     display: grid;
     -ms-grid-template-columns: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
+    grid-gap: 2em;
+    padding-top: 1em;
 }
 section .containerp{
     width: 70%;
@@ -99,29 +101,29 @@ section .containerp{
     grid-gap: 1em;
 }
 footer{
-    background:  rgb(73, 84, 88);
+    background:  rgb(247, 247, 247);
     padding: 1em;
     text-align: center;
 }
 footer a{
     font-size: 20px;
-    color: #fff;
+    color: rgb(37, 37, 37);
 }
 
 section .container article, section .containerp article{
-    background:  rgb(73, 84, 88);
-    border: 1px solid rgb(255, 255, 255);
+    /* background:  rgb(73, 84, 88); */
+    border: 1px solid rgb(240, 240, 240);
     padding: 1em;
     border-radius: 4px;
     transition: linear .3s all;
 }
 section .container article:hover{
-    background:  rgb(85, 97, 102);
+    /* background:  rgb(85, 97, 102); */
     border: 1px solid rgb(73, 84, 88);
 }
 section .container article h1, .containerp h1{
     font-size: 25px;
-    color: lightblue;
+    color: rgb(40, 40, 40);
     padding-bottom: 1em;
 }
 .contact h1{
@@ -130,7 +132,7 @@ section .container article h1, .containerp h1{
 }
 section .container article p, .containerp p{
     font-size: 18px;
-    color: #fff;
+    color: rgb(70, 70, 70);
     transition: all .1s;
 }
 .title{
@@ -296,7 +298,6 @@ form span{
         display: grid;
         -ms-grid-template-columns: repeat(3, 1fr);
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1em;
     }
     section .containerp{
         width: 98%;
@@ -320,7 +321,6 @@ form span{
         display: grid;
         -ms-grid-template-columns: repeat(1, 1fr);
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 1em;
     }
     .contact form{
         display: -ms-grid;
