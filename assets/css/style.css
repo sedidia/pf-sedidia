@@ -20,6 +20,16 @@
     scroll-behavior: smooth;
   }
   
+  .pourcentage{
+    background: #363f4e;
+    border-radius: 6%;
+    box-shadow: inset 1.2px 1.2px 23px #12161D, inset -1.2px -1.2px 23px #323c4e;
+
+    color: red;
+    padding: 5px;
+    text-align: center;
+  }
+
   .ecrireMail{
     position: absolute;
     width: 400px;
@@ -64,6 +74,8 @@
     height: 200px;
     outline: none;
     padding: 1em;
+    background: black;
+    color: white;
   }
   .live {
     height: 120px;
@@ -443,7 +455,7 @@
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background: rgba(0, 0, 0, 0.712);
+  background: rgba(0, 0, 0, 0.897);
   display: flex;
   justify-content: center;
 }
