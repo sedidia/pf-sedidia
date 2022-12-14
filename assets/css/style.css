@@ -3,6 +3,11 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+    outline: none;
+  }
+
+  :root{
+    --black: black;
   }
   
   body {
@@ -15,6 +20,51 @@
     scroll-behavior: smooth;
   }
   
+  .ecrireMail{
+    position: absolute;
+    width: 400px;
+    height: 0px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    background: rgb(0, 0, 0);
+    z-index: 2;
+    overflow: hidden;
+    padding: 0em;
+    border-radius: 5px;
+    position: fixed;
+    overflow: hidden;
+  }
+  .closeMail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    z-index: 1;
+    overflow: hidden;
+    background: transparent;
+    position: fixed;
+  }
+  .closeMail.active{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .ecrireMail.active{
+    padding: 1em;
+    width: 400px;
+    height: auto;
+  }
+  .ecrireMail h1{
+    padding-bottom: 1em;
+  }
+  .ecrireMail textarea{
+    width: 100%;
+    height: 200px;
+    outline: none;
+    padding: 1em;
+  }
   .live {
     height: 120px;
     width: 100%;
@@ -119,7 +169,7 @@
     background-position: 50%;
     background-size: cover;
     height: 70vh;
-    margin-bottom: 2em;
+    padding: 0;
   }
   .myHeader{
     padding-top: 0em;
@@ -318,14 +368,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 5em; */
     padding: 1.5em 0em;
 }
 .navB .navig{
     width: 80%;
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+    /* padding-top: 2em; */
 }
 .navB .navig .img{
     position: relative;
@@ -389,10 +439,13 @@
 }
 
 .mySelf{
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  background: rgba(0, 0, 0, 0.712);
+  display: flex;
+  justify-content: center;
 }
 .mySelf .circ_picture{
   width: 400px;
@@ -406,20 +459,42 @@
   width: 100%;
   overflow: hidden;
 }
-.mySelf .desc_dev{
-  padding-top: 5em;
-}
-.mySelf .desc_dev h1{
+.allHeader h1{
   color: #FFDF3B;
   font-size: 36px;
   padding-bottom: .5em;
 }
+.mySelf .desc_dev{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.btn_contact{
+  padding: 1em;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 2em;
+
+  background: #0873c448;
+  color: #ffffff;
+  border-radius: 2%;
+  box-shadow: 11.41px 11.41px 41px #04396200, -11.41px -11.41px 41px #ffffff00;
+  cursor: pointer;
+  transition: all .3s linear;
+}
+.btn_contact:hover{
+  background: #0873c4da;
+}
+.titre{
+  margin-top: 2em;
+}
 @media screen and (max-width: 1300px) {
-  .mySelf{
+  .mySelf .desc_dev{
     width: 90%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
   }
     .newsfeed .cards{
         width: 90%;
@@ -464,19 +539,7 @@
 @media screen and (max-width: 798px) {
   .mySelf .circ_picture img{
     display: none;
-  }
-  .mySelf{
-    width: 96%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .mySelf .desc_dev{
-    height: 100%;
-    padding-top: 0em;
-  }
-  
+  }  
   
   .newsfeed .cards{
       width: 90%;
@@ -502,14 +565,6 @@
     
 }
 @media screen and (max-width: 578px) {
-  .allHeader{
-    background-image: url('/assets/img/3491.jpg');
-    background-position: 50%;
-    background-size: cover;
-    height: 55vh;
-    margin-bottom: 2em;
-    padding-top: 1em;
-  }
     .realisations .card .img{
         height: 250px;
         overflow: hidden;

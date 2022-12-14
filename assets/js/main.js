@@ -55,3 +55,19 @@ anime({
     opacity: [0, 1],
     delay: (el, i) => 700 + 300 * i
   })
+
+
+  let closeMail = document.querySelector('.closeMail')
+  let start_writing = document.querySelector('.start_writing')
+
+  let ecrireMail = document.querySelector('.ecrireMail')
+
+  start_writing.addEventListener('click', () => {
+    ecrireMail.classList.add('active')
+    closeMail.classList.add('active')
+  })
+  
+  closeMail.addEventListener('click', () => {
+    closeMail.classList.remove('active')
+    ecrireMail.classList.remove('active')
+  })

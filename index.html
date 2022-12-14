@@ -16,41 +16,64 @@
     <!-- icons -->
     <link rel="stylesheet" href="assets/icomoon/style.css">
     <title>SEDIDIA</title>
+
+    <script language="JavaScript">
+        
+        function valider() {
+            var form_err = " "
+            if ( document.ecrire.email.value.length < 1) {
+                form_err = "Email invalide ! - ";
+            }
+            if ( document.ecrire.email.value == "votrenom@mail.com") {
+                form_err = "Email invalide ! - ";
+            }
+            var verim = 0;
+            for (i=1; i<document.ecrire.email.value.length -4; i++) {
+                if ( document.ecrire.email.value.charAt(i) == "@") {
+                    verim = 1;
+                }
+            }
+            if ( verim == 0) {
+                form_err = "Email invalide ! - ";
+            }
+            if ( document.ecrire.nom.value.length < 1) {
+                form_err += "Il manque le Nom. - ";
+            }
+            if ( document.ecrire.PRENOM.value.length < 1) {
+                form_err += "Il manque le Prenom. ";
+            }
+            if ( form_err != " ") {
+                alert(form_err);
+                return false;
+            }
+            return true
+        }
+
+    </script>
 </head>
     <body>
-        <section class="newsfeed allHeader">
-            
-            <div class="card">
-
-                <div class="">
-                    <div class="navB">
-                        <div class="navig">
-                            <div class="img">
-                                <img src="assets/img/3491.jpg" alt="">
-                            </div>
-                
-                            <div class="lNav">
-                
-                                <a href="#projets">projets</a>
-                                <a href="#monReaseau">Me retrouver</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="navB">
+            <div class="navig">                
+                <div class="lNav">
     
-                <div class="mySelf">
-                    <div class="circ_picture">
-                        <img src="assets/img/3491.jpg" alt="">
-                    </div>
-                    <div class="desc_dev">
-                        <h1>Bonjour,</h1>
-                        <p>Je suis Sedidia KASONGO</p>
-                        <p>un developpeur web || JavaScript || UI UX</p>
-                        <p>en mesure d'utiliser toutes mes competences afin de satisfaire les besoins de mes clients.</p>
-                    </div>
+                    <a href="#projets">projets</a>
+                    <a href="#monReaseau">Me retrouver</a>
+                </div>
+            </div>
+        </div>
+        <section class="newsfeed allHeader">
+            <div class="mySelf">
+                <div class="desc_dev">
+                    <h1>Bonjour,</h1>
+                    <p>Je suis Sedidia KASONGO</p>
+                    <p>un developpeur web || JavaScript || UI UX</p>
+                    <p>en mesure d'utiliser toutes mes competences afin de satisfaire les besoins de mes clients.</p>
+                
+                    <div class="btn_contact start_writing">Besoin de mes competences ?</div>
                 </div>
             </div>
         </section>
+
         <div class="titre">Competences</div>
         <section class="newsfeed">      
             <div class="cards">
@@ -222,10 +245,29 @@
             </div>
         </section>
 
+        <div class="ecrireMail">
+            <h1>M'envoyer un mail</h1>
+            <!-- <form action="" method="post">
+                <textarea name="" id=""></textarea>
+                <div class="btn_contact">Besoin de mes competences ?</div>
+            </form> -->
+
+
+
+            
+            <!-- PLF - / -->
+            <form action="mailto:sedidiak@gmail.com?subject=Fomulaire Mon javascript" name="envoi" method=POST enctype="text/plain">
+                
+                <textarea name="message"></textarea>
+                
+                <button type="submit"  name="Envoyer" class="btn_contact">Besoin de mes competences ?</button>
+            </form>
+        </div>
+        <div class="closeMail"></div>
+
         <div class="space" id="monReaseau"></div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
 </html>
-
